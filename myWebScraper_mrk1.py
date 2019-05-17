@@ -4,6 +4,7 @@ import requests
 import pandas as pd
 from pandas import Series, DataFrame
 import time
+import logging
 
 #URL（東京都足立区の賃貸住宅情報 検索結果の1ページ目）
 url = 'http://suumo.jp/jj/chintai/ichiran/FR301FC001/?ar=030&bs=040&ta=13&sc=13121&cb=0.0&ct=9999999&et=9999999&cn=9999999&mb=0&mt=9999999&shkr1=03&shkr2=03&shkr3=03&shkr4=03&fw2=&srch_navi=1'
@@ -180,3 +181,5 @@ suumo_df.columns=['マンション名','住所','立地1','立地2','立地3','�
 
 #csvファイルとして保存
 suumo_df.to_csv('suumo_adachi.csv', sep = '\t',encoding='utf-16')
+
+
